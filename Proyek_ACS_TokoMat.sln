@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyek_ACS_TokoMat", "Proyek_ACS_TokoMat\Proyek_ACS_TokoMat.csproj", "{3CDCA344-0B72-4C38-B98D-EC2937D2B582}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CDCA344-0B72-4C38-B98D-EC2937D2B582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDCA344-0B72-4C38-B98D-EC2937D2B582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDCA344-0B72-4C38-B98D-EC2937D2B582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDCA344-0B72-4C38-B98D-EC2937D2B582}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E36DC162-E0CA-45AE-ACCD-3E0675D9A735}
+	EndGlobalSection
+EndGlobal
