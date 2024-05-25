@@ -42,18 +42,18 @@ namespace Proyek_ACS_TokoMat.User
             // 
             // textInvc
             // 
-            this.textInvc.Location = new System.Drawing.Point(635, 32);
-            this.textInvc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textInvc.Location = new System.Drawing.Point(564, 26);
+            this.textInvc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textInvc.Name = "textInvc";
-            this.textInvc.Size = new System.Drawing.Size(234, 26);
+            this.textInvc.Size = new System.Drawing.Size(208, 22);
             this.textInvc.TabIndex = 30;
             // 
             // btnCcari
             // 
-            this.btnCcari.Location = new System.Drawing.Point(879, 29);
-            this.btnCcari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCcari.Location = new System.Drawing.Point(781, 23);
+            this.btnCcari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCcari.Name = "btnCcari";
-            this.btnCcari.Size = new System.Drawing.Size(112, 35);
+            this.btnCcari.Size = new System.Drawing.Size(100, 28);
             this.btnCcari.TabIndex = 29;
             this.btnCcari.Text = "Cari Barang";
             this.btnCcari.UseVisualStyleBackColor = true;
@@ -62,26 +62,28 @@ namespace Proyek_ACS_TokoMat.User
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(23, 29);
+            this.Title.Location = new System.Drawing.Point(20, 23);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(151, 29);
+            this.Title.Size = new System.Drawing.Size(127, 25);
             this.Title.TabIndex = 28;
             this.Title.Text = "Cari Barang";
             // 
             // btnPembelian
             // 
-            this.btnPembelian.Location = new System.Drawing.Point(839, 509);
+            this.btnPembelian.Location = new System.Drawing.Point(746, 407);
+            this.btnPembelian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Size = new System.Drawing.Size(152, 49);
+            this.btnPembelian.Size = new System.Drawing.Size(135, 39);
             this.btnPembelian.TabIndex = 26;
             this.btnPembelian.Text = "Pembelian";
             this.btnPembelian.UseVisualStyleBackColor = true;
             // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(29, 509);
+            this.btnBatal.Location = new System.Drawing.Point(26, 407);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(152, 49);
+            this.btnBatal.Size = new System.Drawing.Size(135, 39);
             this.btnBatal.TabIndex = 27;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
@@ -91,37 +93,39 @@ namespace Proyek_ACS_TokoMat.User
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 78);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 62);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(963, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 330);
             this.dataGridView1.TabIndex = 25;
             // 
             // btnPenjualan
             // 
-            this.btnPenjualan.Location = new System.Drawing.Point(681, 509);
+            this.btnPenjualan.Location = new System.Drawing.Point(605, 407);
+            this.btnPenjualan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPenjualan.Name = "btnPenjualan";
-            this.btnPenjualan.Size = new System.Drawing.Size(152, 49);
+            this.btnPenjualan.Size = new System.Drawing.Size(135, 39);
             this.btnPenjualan.TabIndex = 31;
             this.btnPenjualan.Text = "Penjualan";
             this.btnPenjualan.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(523, 509);
+            this.button1.Location = new System.Drawing.Point(465, 407);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 49);
+            this.button1.Size = new System.Drawing.Size(135, 39);
             this.button1.TabIndex = 32;
             this.button1.Text = "Pre Order";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Cari_Barang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 594);
+            this.ClientSize = new System.Drawing.Size(907, 475);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPenjualan);
             this.Controls.Add(this.textInvc);
@@ -130,8 +134,10 @@ namespace Proyek_ACS_TokoMat.User
             this.Controls.Add(this.btnPembelian);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cari_Barang";
             this.Text = "Cari_Barang";
+            this.Load += new System.EventHandler(this.Cari_Barang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

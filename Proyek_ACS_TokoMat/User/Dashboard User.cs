@@ -16,5 +16,15 @@ namespace Proyek_ACS_TokoMat
         {
             InitializeComponent();
         }
+
+        private void btnPenjualan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dashboard_User_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
