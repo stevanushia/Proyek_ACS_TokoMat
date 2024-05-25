@@ -1,7 +1,7 @@
 ﻿
 namespace Proyek_ACS_TokoMat
 {
-    partial class Dashboard
+    partial class DashboardAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,21 +32,21 @@ namespace Proyek_ACS_TokoMat
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.masterUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLaporanPenjualan = new System.Windows.Forms.Button();
+            this.btnLaporanPembelian = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(653, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(580, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,51 +56,56 @@ namespace Proyek_ACS_TokoMat
             this.masterSupplierToolStripMenuItem,
             this.masterUserToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.masterToolStripMenuItem.Text = "Master";
             // 
             // masterSupplierToolStripMenuItem
             // 
             this.masterSupplierToolStripMenuItem.Name = "masterSupplierToolStripMenuItem";
-            this.masterSupplierToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.masterSupplierToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.masterSupplierToolStripMenuItem.Text = "Master Supplier";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(26, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 99);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Laporan Penjualan ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(340, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(282, 99);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Laporan Pembelian";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // masterUserToolStripMenuItem
             // 
             this.masterUserToolStripMenuItem.Name = "masterUserToolStripMenuItem";
-            this.masterUserToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.masterUserToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.masterUserToolStripMenuItem.Text = "Master User";
             // 
-            // Dashboard
+            // btnLaporanPenjualan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.btnLaporanPenjualan.Location = new System.Drawing.Point(23, 45);
+            this.btnLaporanPenjualan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLaporanPenjualan.Name = "btnLaporanPenjualan";
+            this.btnLaporanPenjualan.Size = new System.Drawing.Size(251, 79);
+            this.btnLaporanPenjualan.TabIndex = 1;
+            this.btnLaporanPenjualan.Text = "Laporan Penjualan ";
+            this.btnLaporanPenjualan.UseVisualStyleBackColor = true;
+            this.btnLaporanPenjualan.Click += new System.EventHandler(this.btnLaporanPenjualan_Click);
+            // 
+            // btnLaporanPembelian
+            // 
+            this.btnLaporanPembelian.Location = new System.Drawing.Point(302, 45);
+            this.btnLaporanPembelian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLaporanPembelian.Name = "btnLaporanPembelian";
+            this.btnLaporanPembelian.Size = new System.Drawing.Size(251, 79);
+            this.btnLaporanPembelian.TabIndex = 2;
+            this.btnLaporanPembelian.Text = "Laporan Pembelian";
+            this.btnLaporanPembelian.UseVisualStyleBackColor = true;
+            this.btnLaporanPembelian.Click += new System.EventHandler(this.btnLaporanPembelian_Click);
+            // 
+            // DashboardAdmin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 413);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(580, 330);
+            this.Controls.Add(this.btnLaporanPembelian);
+            this.Controls.Add(this.btnLaporanPenjualan);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Dashboard";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "DashboardAdmin";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -113,8 +118,8 @@ namespace Proyek_ACS_TokoMat
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterSupplierToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLaporanPenjualan;
+        private System.Windows.Forms.Button btnLaporanPembelian;
         private System.Windows.Forms.ToolStripMenuItem masterUserToolStripMenuItem;
     }
 }

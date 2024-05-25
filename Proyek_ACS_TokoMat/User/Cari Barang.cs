@@ -16,5 +16,10 @@ namespace Proyek_ACS_TokoMat.User
         {
             InitializeComponent();
         }
+
+        private void Cari_Barang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

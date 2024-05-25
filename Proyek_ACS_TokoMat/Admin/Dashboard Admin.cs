@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Proyek_ACS_TokoMat
 {
-    public partial class Form1 : Form
+    public partial class DashboardAdmin : Form
     {
-        public Form1()
+        public DashboardAdmin()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLaporanPenjualan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLaporanPembelian_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
