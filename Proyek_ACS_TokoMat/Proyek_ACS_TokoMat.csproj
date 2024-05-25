@@ -124,6 +124,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="User\Cari Barang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +222,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="User\Pembelian Barang.resx">
       <DependentUpon>Pembelian Barang.cs</DependentUpon>
@@ -252,7 +258,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TOKOMAT.png" />
+    <Content Include="Resources\TOKOMAT.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

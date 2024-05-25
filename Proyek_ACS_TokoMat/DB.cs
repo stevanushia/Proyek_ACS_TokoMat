@@ -82,7 +82,7 @@ namespace Proyek_ACS_TokoMat
             try
             {
                 DB.openConnection();
-                DataTable dt = get($"SELECT * FROM USERS WHERE NAMA = '{nama}' AND PASSWORD = '{password}' AND STATUS != 'Non-Aktif'");
+                DataTable dt = get($"SELECT * FROM USERS WHERE NAMA = '{nama}' AND PASSWORD = '{password}' AND STATUS != 'nonaktif'");
                 DataRow user = dt.Rows[0];
                 logged = user;
                 DB.closeConnection();
