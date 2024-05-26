@@ -76,7 +76,7 @@ namespace Proyek_ACS_TokoMat.User
             // 
             this.comboPayment.FormattingEnabled = true;
             this.comboPayment.Location = new System.Drawing.Point(737, 340);
-            this.comboPayment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboPayment.Margin = new System.Windows.Forms.Padding(4);
             this.comboPayment.Name = "comboPayment";
             this.comboPayment.Size = new System.Drawing.Size(150, 24);
             this.comboPayment.TabIndex = 212;
@@ -93,7 +93,7 @@ namespace Proyek_ACS_TokoMat.User
             // txtInputUang
             // 
             this.txtInputUang.Location = new System.Drawing.Point(737, 400);
-            this.txtInputUang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInputUang.Margin = new System.Windows.Forms.Padding(4);
             this.txtInputUang.Name = "txtInputUang";
             this.txtInputUang.Size = new System.Drawing.Size(150, 22);
             this.txtInputUang.TabIndex = 210;
@@ -211,9 +211,9 @@ namespace Proyek_ACS_TokoMat.User
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(35, 201);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 16);
+            this.label10.Size = new System.Drawing.Size(101, 16);
             this.label10.TabIndex = 198;
-            this.label10.Text = "Harga Buku : ";
+            this.label10.Text = "Harga Barang : ";
             // 
             // txtHarga
             // 
@@ -229,9 +229,9 @@ namespace Proyek_ACS_TokoMat.User
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(35, 149);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 16);
+            this.label9.Size = new System.Drawing.Size(100, 16);
             this.label9.TabIndex = 196;
-            this.label9.Text = "Nama Buku : ";
+            this.label9.Text = "Nama Barang : ";
             // 
             // txtNama
             // 
@@ -247,9 +247,9 @@ namespace Proyek_ACS_TokoMat.User
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(35, 103);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.Size = new System.Drawing.Size(95, 16);
             this.label8.TabIndex = 194;
-            this.label8.Text = "Kode Buku : ";
+            this.label8.Text = "Kode Barang : ";
             // 
             // txtKodeBuku
             // 
