@@ -169,7 +169,8 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             this.comboBoxRole.FormattingEnabled = true;
             this.comboBoxRole.Items.AddRange(new object[] {
-            "admin"});
+            "admin",
+            "kasir"});
             this.comboBoxRole.Location = new System.Drawing.Point(98, 525);
             this.comboBoxRole.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRole.Name = "comboBoxRole";
