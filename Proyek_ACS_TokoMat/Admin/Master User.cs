@@ -19,8 +19,8 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Add_User au = new Add_User();
-            au.ShowDialog();
+            //Add_User au = new Add_User();
+            //au.ShowDialog();
         }
 
         private void Master_User_Load(object sender, EventArgs e)
