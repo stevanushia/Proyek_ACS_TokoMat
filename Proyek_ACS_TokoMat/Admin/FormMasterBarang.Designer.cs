@@ -1,7 +1,6 @@
-﻿
-namespace Proyek_ACS_TokoMat.Admin
+﻿namespace Proyek_ACS_TokoMat.Admin
 {
-    partial class Master_Barang
+    partial class FormMasterBarang
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +34,6 @@ namespace Proyek_ACS_TokoMat.Admin
             this.label1 = new System.Windows.Forms.Label();
             this.numHarga = new System.Windows.Forms.NumericUpDown();
             this.btnClear = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.numQty = new System.Windows.Forms.NumericUpDown();
@@ -57,7 +54,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 20);
+            this.label3.Location = new System.Drawing.Point(14, 13);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 20);
@@ -66,16 +63,15 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // searchBar
             // 
-            this.searchBar.Location = new System.Drawing.Point(145, 19);
+            this.searchBar.Location = new System.Drawing.Point(145, 12);
             this.searchBar.Margin = new System.Windows.Forms.Padding(4);
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(901, 22);
             this.searchBar.TabIndex = 69;
-            this.searchBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBar_KeyUp);
             // 
             // numBeli
             // 
-            this.numBeli.Location = new System.Drawing.Point(109, 480);
+            this.numBeli.Location = new System.Drawing.Point(109, 473);
             this.numBeli.Margin = new System.Windows.Forms.Padding(4);
             this.numBeli.Maximum = new decimal(new int[] {
             1316134911,
@@ -89,7 +85,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 484);
+            this.label1.Location = new System.Drawing.Point(22, 477);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 16);
@@ -98,7 +94,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // numHarga
             // 
-            this.numHarga.Location = new System.Drawing.Point(109, 448);
+            this.numHarga.Location = new System.Drawing.Point(109, 441);
             this.numHarga.Margin = new System.Windows.Forms.Padding(4);
             this.numHarga.Maximum = new decimal(new int[] {
             1316134911,
@@ -112,7 +108,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // btnClear
             // 
             this.btnClear.Enabled = false;
-            this.btnClear.Location = new System.Drawing.Point(208, 510);
+            this.btnClear.Location = new System.Drawing.Point(208, 503);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(100, 28);
@@ -121,44 +117,21 @@ namespace Proyek_ACS_TokoMat.Admin
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(330, 421);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(50, 16);
-            this.label12.TabIndex = 62;
-            this.label12.Text = "Status :";
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Items.AddRange(new object[] {
-            "Available",
-            "Not Available"});
-            this.cbStatus.Location = new System.Drawing.Point(418, 418);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(185, 24);
-            this.cbStatus.TabIndex = 61;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(754, 489);
+            this.btnUpdate.Location = new System.Drawing.Point(754, 482);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(143, 47);
             this.btnUpdate.TabIndex = 58;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(22, 516);
+            this.label16.Location = new System.Drawing.Point(22, 509);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 16);
@@ -167,7 +140,8 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // numQty
             // 
-            this.numQty.Location = new System.Drawing.Point(109, 514);
+            this.numQty.Enabled = false;
+            this.numQty.Location = new System.Drawing.Point(109, 507);
             this.numQty.Margin = new System.Windows.Forms.Padding(4);
             this.numQty.Maximum = new decimal(new int[] {
             10000,
@@ -186,7 +160,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 452);
+            this.label17.Location = new System.Drawing.Point(22, 445);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 16);
@@ -195,7 +169,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(109, 416);
+            this.textBoxNama.Location = new System.Drawing.Point(109, 409);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(197, 22);
@@ -204,7 +178,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(22, 420);
+            this.label18.Location = new System.Drawing.Point(22, 413);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(50, 16);
@@ -214,7 +188,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // textBoxId
             // 
             this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(109, 384);
+            this.textBoxId.Location = new System.Drawing.Point(109, 377);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(132, 22);
@@ -224,7 +198,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(22, 388);
+            this.label19.Location = new System.Drawing.Point(22, 381);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(26, 16);
@@ -233,7 +207,7 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(905, 489);
+            this.btnInput.Location = new System.Drawing.Point(905, 482);
             this.btnInput.Margin = new System.Windows.Forms.Padding(4);
             this.btnInput.Name = "btnInput";
             this.btnInput.Size = new System.Drawing.Size(143, 47);
@@ -248,28 +222,25 @@ namespace Proyek_ACS_TokoMat.Admin
             this.dgvBarang.AllowUserToDeleteRows = false;
             this.dgvBarang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBarang.Location = new System.Drawing.Point(13, 51);
+            this.dgvBarang.Location = new System.Drawing.Point(13, 44);
             this.dgvBarang.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBarang.Name = "dgvBarang";
             this.dgvBarang.ReadOnly = true;
             this.dgvBarang.RowHeadersWidth = 51;
             this.dgvBarang.Size = new System.Drawing.Size(1035, 311);
             this.dgvBarang.TabIndex = 49;
-            this.dgvBarang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarang_CellDoubleClick);
             // 
-            // Master_Barang
+            // FormMasterBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 558);
+            this.ClientSize = new System.Drawing.Size(1068, 564);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.numBeli);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numHarga);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.numQty);
@@ -280,10 +251,9 @@ namespace Proyek_ACS_TokoMat.Admin
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.dgvBarang);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Master_Barang";
-            this.Text = "Master_Barang";
-            this.Load += new System.EventHandler(this.Master_Barang_Load);
+            this.Name = "FormMasterBarang";
+            this.Text = "FormMasterBarang";
+            this.Load += new System.EventHandler(this.FormMasterBarang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numBeli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHarga)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
@@ -301,8 +271,6 @@ namespace Proyek_ACS_TokoMat.Admin
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.NumericUpDown numHarga;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown numQty;

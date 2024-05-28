@@ -82,7 +82,7 @@ namespace Proyek_ACS_TokoMat
             try
             {
                 DB.openConnection();
-                DataTable dt = get($"SELECT * FROM USERS WHERE NAMA = '{nama}' AND PASSWORD = '{password}' AND STATUS != 'Non-Aktif'");
+                DataTable dt = get($"SELECT * FROM USERS WHERE NAMA = '{nama}' AND PASSWORD = '{password}' AND STATUS != 'nonaktif'");
                 DataRow user = dt.Rows[0];
                 logged = user;
                 DB.closeConnection();
@@ -100,11 +100,7 @@ namespace Proyek_ACS_TokoMat
             DataTable max = DB.get($"SELECT COUNT(*)+1 AS MAX FROM {table}");
             DataRow r = max.Rows[0];
             string urut = r.Field<int>("MAX").ToString();
-            while (urut.Length < 3)
-            {
-                urut = "0" + urut;
-            }
-            return table.Substring(0, 2) + urut;
+            return urut;
         }
 
         public static string generateIdTr(string table, SqlTransaction transaction)

@@ -29,70 +29,75 @@ namespace Proyek_ACS_TokoMat
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnPembelian = new System.Windows.Forms.Button();
+            this.btnPenjualan = new System.Windows.Forms.Button();
+            this.btnRetur = new System.Windows.Forms.Button();
+            this.btnPreOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // btnPembelian
             // 
-            this.button2.Location = new System.Drawing.Point(346, 36);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(282, 99);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Pembelian";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPembelian.Location = new System.Drawing.Point(308, 29);
+            this.btnPembelian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPembelian.Name = "btnPembelian";
+            this.btnPembelian.Size = new System.Drawing.Size(251, 79);
+            this.btnPembelian.TabIndex = 4;
+            this.btnPembelian.Text = "Pembelian";
+            this.btnPembelian.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnPenjualan
             // 
-            this.button1.Location = new System.Drawing.Point(38, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 99);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Penjualan ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPenjualan.Location = new System.Drawing.Point(34, 29);
+            this.btnPenjualan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPenjualan.Name = "btnPenjualan";
+            this.btnPenjualan.Size = new System.Drawing.Size(251, 79);
+            this.btnPenjualan.TabIndex = 3;
+            this.btnPenjualan.Text = "Penjualan ";
+            this.btnPenjualan.UseVisualStyleBackColor = true;
+            this.btnPenjualan.Click += new System.EventHandler(this.btnPenjualan_Click);
             // 
-            // button3
+            // btnRetur
             // 
-            this.button3.Location = new System.Drawing.Point(38, 152);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(282, 99);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Retur";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRetur.Location = new System.Drawing.Point(34, 122);
+            this.btnRetur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRetur.Name = "btnRetur";
+            this.btnRetur.Size = new System.Drawing.Size(251, 79);
+            this.btnRetur.TabIndex = 5;
+            this.btnRetur.Text = "Retur";
+            this.btnRetur.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnPreOrder
             // 
-            this.button4.Location = new System.Drawing.Point(346, 152);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(282, 99);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Pre Order";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPreOrder.Location = new System.Drawing.Point(308, 122);
+            this.btnPreOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPreOrder.Name = "btnPreOrder";
+            this.btnPreOrder.Size = new System.Drawing.Size(251, 79);
+            this.btnPreOrder.TabIndex = 6;
+            this.btnPreOrder.Text = "Pre Order";
+            this.btnPreOrder.UseVisualStyleBackColor = true;
             // 
             // Dashboard_User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(593, 360);
+            this.Controls.Add(this.btnPreOrder);
+            this.Controls.Add(this.btnRetur);
+            this.Controls.Add(this.btnPembelian);
+            this.Controls.Add(this.btnPenjualan);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Dashboard_User";
             this.Text = "Dashboard_User";
+            this.Load += new System.EventHandler(this.Dashboard_User_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPembelian;
+        private System.Windows.Forms.Button btnPenjualan;
+        private System.Windows.Forms.Button btnRetur;
+        private System.Windows.Forms.Button btnPreOrder;
     }
 }

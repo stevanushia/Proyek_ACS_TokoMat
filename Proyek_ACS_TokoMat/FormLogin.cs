@@ -40,8 +40,8 @@ namespace Proyek_ACS_TokoMat
 
             if (login)
             {
-                //FormDashboard f = new FormDashboard(this);
-                //f.Show();
+                FormDashboard f = new FormDashboard(this);
+                f.Show();
                 this.Hide();
 
                 textBox1.Text = "";
@@ -67,6 +67,11 @@ namespace Proyek_ACS_TokoMat
             {
                 Login();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
