@@ -602,6 +602,10 @@ namespace Proyek_ACS_TokoMat {
             
             private global::System.Data.DataColumn columnhargajual;
             
+            private global::System.Data.DataColumn columnhargabeli;
+            
+            private global::System.Data.DataColumn columnstatus;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public barangDataTable() {
@@ -669,6 +673,22 @@ namespace Proyek_ACS_TokoMat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn hargabeliColumn {
+                get {
+                    return this.columnhargabeli;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -704,13 +724,15 @@ namespace Proyek_ACS_TokoMat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public barangRow AddbarangRow(string nama, int qty, int hargajual) {
+            public barangRow AddbarangRow(string nama, int qty, int hargajual, int hargabeli, string status) {
                 barangRow rowbarangRow = ((barangRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         nama,
                         qty,
-                        hargajual};
+                        hargajual,
+                        hargabeli,
+                        status};
                 rowbarangRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowbarangRow);
                 return rowbarangRow;
@@ -744,6 +766,8 @@ namespace Proyek_ACS_TokoMat {
                 this.columnnama = base.Columns["nama"];
                 this.columnqty = base.Columns["qty"];
                 this.columnhargajual = base.Columns["hargajual"];
+                this.columnhargabeli = base.Columns["hargabeli"];
+                this.columnstatus = base.Columns["status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -757,6 +781,10 @@ namespace Proyek_ACS_TokoMat {
                 base.Columns.Add(this.columnqty);
                 this.columnhargajual = new global::System.Data.DataColumn("hargajual", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhargajual);
+                this.columnhargabeli = new global::System.Data.DataColumn("hargabeli", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnhargabeli);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AutoIncrement = true;
@@ -769,6 +797,9 @@ namespace Proyek_ACS_TokoMat {
                 this.columnnama.MaxLength = 100;
                 this.columnqty.AllowDBNull = false;
                 this.columnhargajual.AllowDBNull = false;
+                this.columnhargabeli.AllowDBNull = false;
+                this.columnstatus.AllowDBNull = false;
+                this.columnstatus.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3300,6 +3331,28 @@ namespace Proyek_ACS_TokoMat {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int hargabeli {
+                get {
+                    return ((int)(this[this.tablebarang.hargabeliColumn]));
+                }
+                set {
+                    this[this.tablebarang.hargabeliColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string status {
+                get {
+                    return ((string)(this[this.tablebarang.statusColumn]));
+                }
+                set {
+                    this[this.tablebarang.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public dpoRow[] GetdpoRows() {
                 if ((this.Table.ChildRelations["FK__dpo__barang__4316F928"] == null)) {
                     return new dpoRow[0];
@@ -4590,37 +4643,48 @@ namespace Proyek_ACS_TokoMat.db_tokomatDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("nama", "nama");
             tableMapping.ColumnMappings.Add("qty", "qty");
             tableMapping.ColumnMappings.Add("hargajual", "hargajual");
+            tableMapping.ColumnMappings.Add("hargabeli", "hargabeli");
+            tableMapping.ColumnMappings.Add("status", "status");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[barang] WHERE (([id] = @Original_id) AND ([nama] = @Original_n" +
-                "ama) AND ([qty] = @Original_qty) AND ([hargajual] = @Original_hargajual))";
+                "ama) AND ([qty] = @Original_qty) AND ([hargajual] = @Original_hargajual) AND ([h" +
+                "argabeli] = @Original_hargabeli) AND ([status] = @Original_status))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hargajual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargajual", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hargabeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargabeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[barang] ([nama], [qty], [hargajual]) VALUES (@nama, @qty, @har" +
-                "gajual);\r\nSELECT id, nama, qty, hargajual FROM barang WHERE (id = SCOPE_IDENTITY" +
-                "())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[barang] ([nama], [qty], [hargajual], [hargabeli], [status]) VA" +
+                "LUES (@nama, @qty, @hargajual, @hargabeli, @status);\r\nSELECT id, nama, qty, harg" +
+                "ajual, hargabeli, status FROM barang WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hargajual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargajual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hargabeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargabeli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[barang] SET [nama] = @nama, [qty] = @qty, [hargajual] = @hargajual WHERE (([id] = @Original_id) AND ([nama] = @Original_nama) AND ([qty] = @Original_qty) AND ([hargajual] = @Original_hargajual));
-SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[barang] SET [nama] = @nama, [qty] = @qty, [hargajual] = @hargajual, [hargabeli] = @hargabeli, [status] = @status WHERE (([id] = @Original_id) AND ([nama] = @Original_nama) AND ([qty] = @Original_qty) AND ([hargajual] = @Original_hargajual) AND ([hargabeli] = @Original_hargabeli) AND ([status] = @Original_status));
+SELECT id, nama, qty, hargajual, hargabeli, status FROM barang WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hargajual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargajual", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hargabeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargabeli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nama", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nama", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_qty", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hargajual", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargajual", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_hargabeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "hargabeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4637,7 +4701,7 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, nama, qty, hargajual FROM dbo.barang";
+            this._commandCollection[0].CommandText = "SELECT id, nama, qty, hargajual, hargabeli, status FROM dbo.barang";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4698,7 +4762,7 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id, string Original_nama, int Original_qty, int Original_hargajual) {
+        public virtual int Delete(int Original_id, string Original_nama, int Original_qty, int Original_hargajual, int Original_hargabeli, string Original_status) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
             if ((Original_nama == null)) {
                 throw new global::System.ArgumentNullException("Original_nama");
@@ -4708,6 +4772,13 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_qty));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_hargajual));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_hargabeli));
+            if ((Original_status == null)) {
+                throw new global::System.ArgumentNullException("Original_status");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_status));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4728,7 +4799,7 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string nama, int qty, int hargajual) {
+        public virtual int Insert(string nama, int qty, int hargajual, int hargabeli, string status) {
             if ((nama == null)) {
                 throw new global::System.ArgumentNullException("nama");
             }
@@ -4737,6 +4808,13 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
             }
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(qty));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(hargajual));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(hargabeli));
+            if ((status == null)) {
+                throw new global::System.ArgumentNullException("status");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(status));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4757,7 +4835,7 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nama, int qty, int hargajual, int Original_id, string Original_nama, int Original_qty, int Original_hargajual, int id) {
+        public virtual int Update(string nama, int qty, int hargajual, int hargabeli, string status, int Original_id, string Original_nama, int Original_qty, int Original_hargajual, int Original_hargabeli, string Original_status, int id) {
             if ((nama == null)) {
                 throw new global::System.ArgumentNullException("nama");
             }
@@ -4766,16 +4844,30 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(qty));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(hargajual));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(hargabeli));
+            if ((status == null)) {
+                throw new global::System.ArgumentNullException("status");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(status));
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id));
             if ((Original_nama == null)) {
                 throw new global::System.ArgumentNullException("Original_nama");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_nama));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_nama));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_qty));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_hargajual));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_qty));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_hargajual));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_hargabeli));
+            if ((Original_status == null)) {
+                throw new global::System.ArgumentNullException("Original_status");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_status));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4796,8 +4888,8 @@ SELECT id, nama, qty, hargajual FROM barang WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nama, int qty, int hargajual, int Original_id, string Original_nama, int Original_qty, int Original_hargajual) {
-            return this.Update(nama, qty, hargajual, Original_id, Original_nama, Original_qty, Original_hargajual, Original_id);
+        public virtual int Update(string nama, int qty, int hargajual, int hargabeli, string status, int Original_id, string Original_nama, int Original_qty, int Original_hargajual, int Original_hargabeli, string Original_status) {
+            return this.Update(nama, qty, hargajual, hargabeli, status, Original_id, Original_nama, Original_qty, Original_hargajual, Original_hargabeli, Original_status, Original_id);
         }
     }
     
