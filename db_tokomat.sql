@@ -18,6 +18,8 @@ CREATE TABLE barang (
     nama NVARCHAR(100) NOT NULL,
     qty int NOT NULL,
     hargajual int NOT NULL,
+    hargabeli int NOT NULL,
+    status varchar(50) NOT NULL
 );
 
 CREATE TABLE hpo (
