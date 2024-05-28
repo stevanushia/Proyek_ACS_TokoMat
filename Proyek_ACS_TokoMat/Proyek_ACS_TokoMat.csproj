@@ -53,30 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Add Barang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Add Barang.Designer.cs">
-      <DependentUpon>Add Barang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Add Supplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Add Supplier.Designer.cs">
-      <DependentUpon>Add Supplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Edit Barang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Edit Barang.Designer.cs">
-      <DependentUpon>Edit Barang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Edit Supplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Edit Supplier.Designer.cs">
-      <DependentUpon>Edit Supplier.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\FormMasterBarang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,12 +118,6 @@
       <DependentUpon>Dashboard User.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="Admin\Dashboard Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Dashboard Admin.Designer.cs">
-      <DependentUpon>Dashboard Admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,21 +144,6 @@
     <Compile Include="User\Pre Order.Designer.cs">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\Add Barang.resx">
-      <DependentUpon>Add Barang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Add Supplier.resx">
-      <DependentUpon>Add Supplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Dashboard Admin.resx">
-      <DependentUpon>Dashboard Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Edit Barang.resx">
-      <DependentUpon>Edit Barang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Edit Supplier.resx">
-      <DependentUpon>Edit Supplier.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\FormMasterBarang.resx">
       <DependentUpon>FormMasterBarang.cs</DependentUpon>
     </EmbeddedResource>
