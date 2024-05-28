@@ -113,10 +113,10 @@
     <Compile Include="Admin\Master User.Designer.cs">
       <DependentUpon>Master User.cs</DependentUpon>
     </Compile>
-    <Compile Include="db_lmaomartDataSet.Designer.cs">
+    <Compile Include="db_tokomatDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>db_lmaomartDataSet.xsd</DependentUpon>
+      <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
@@ -233,16 +233,16 @@
     <EmbeddedResource Include="User\Pre Order.resx">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="db_lmaomartDataSet.xsc">
-      <DependentUpon>db_lmaomartDataSet.xsd</DependentUpon>
+    <None Include="db_tokomatDataSet.xsc">
+      <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </None>
-    <None Include="db_lmaomartDataSet.xsd">
+    <None Include="db_tokomatDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>db_lmaomartDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>db_tokomatDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="db_lmaomartDataSet.xss">
-      <DependentUpon>db_lmaomartDataSet.xsd</DependentUpon>
+    <None Include="db_tokomatDataSet.xss">
+      <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

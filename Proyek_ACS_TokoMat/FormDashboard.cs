@@ -13,9 +13,11 @@ namespace Proyek_ACS_TokoMat
 {
     public partial class FormDashboard : Form
     {
-        public FormDashboard()
+        FormLogin l;
+        public FormDashboard(FormLogin l)
         {
             InitializeComponent();
+            this.l = l;
         }
 
         private void FormDashboard_Load(object sender, EventArgs e)
@@ -38,6 +40,12 @@ namespace Proyek_ACS_TokoMat
         private void masterStokToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            l.Show();
+            this.Close();
         }
     }
 }

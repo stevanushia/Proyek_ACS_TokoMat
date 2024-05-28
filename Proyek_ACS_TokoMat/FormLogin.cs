@@ -40,7 +40,7 @@ namespace Proyek_ACS_TokoMat
 
             if (login)
             {
-                FormDashboard f = new FormDashboard();
+                FormDashboard f = new FormDashboard(this);
                 f.Show();
                 this.Hide();
 
