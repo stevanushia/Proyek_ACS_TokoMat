@@ -74,10 +74,64 @@ namespace Proyek_ACS_TokoMat.Admin
                     return;
                 }
 
-                DB.exec($"INSERT INTO BARANG VALUES('{id}','{nama}','{qty}','{harga}', '{hbeli}' ,'{status}')");
+                DB.exec($"INSERT INTO BARANG VALUES('{nama}','{qty}','{harga}', '{hbeli}' ,'{status}')");
                 reset();
             }
             else MessageBox.Show("Ada field kosong");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string id = textBoxId.Text;
+            string nama = textBoxNama.Text;
+            int harga = (int)numHarga.Value;
+            int hbeli = (int)numBeli.Value;
+            int qty = (int)numQty.Value;
+            string status = cbStatus.Text;
+
+
+            if (nama != "" && harga > 0 && hbeli > 0 && cbStatus.SelectedIndex > -1)
+            {
+                if (DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = '{id}'") != nama)
+                {
+                    if (DB.cekNamaKembar("BARANG", nama))
+                    {
+                        MessageBox.Show($"Nama {nama} sudah dipakai");
+                        return;
+                    }
+                }
+
+                if (harga < hbeli)
+                {
+                    MessageBox.Show("Harga jual lebih kecil dari harga beli");
+                    return;
+                }
+
+                DB.exec($"UPDATE BARANG SET NAMA = '{nama}', HARGAJUAL = {harga}, HARGABELI =  {hbeli}, QTY = {qty}, STATUS = '{status}', WHERE ID = '{id}'");
+                MessageBox.Show("Berhasil mengupdate " + nama);
+                reset();
+            }
+            else MessageBox.Show("Ada field kosong");
+        }
+
+        private void dgvBarang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow sel = dgvBarang.Rows[e.RowIndex];
+
+            textBoxId.Text = sel.Cells["ID"].Value.ToString();
+            textBoxNama.Text = sel.Cells["NAMA"].Value.ToString();
+            numHarga.Value = (int)sel.Cells["HARGAJUAL"].Value;
+            numBeli.Value = (int)sel.Cells["HARGABELI"].Value;
+            numQty.Value = (int)sel.Cells["QTY"].Value;
+            cbStatus.SelectedIndex = cbStatus.Items.IndexOf(sel.Cells["STATUS"].Value.ToString());
+
+            btnInput.Enabled = false;
+            btnUpdate.Enabled = true;
+        }
+
+        private void searchBar_KeyUp(object sender, KeyEventArgs e)
+        {
+            reset();
         }
     }
 }

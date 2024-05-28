@@ -71,6 +71,7 @@ namespace Proyek_ACS_TokoMat.Admin
             this.searchBar.Name = "searchBar";
             this.searchBar.Size = new System.Drawing.Size(901, 22);
             this.searchBar.TabIndex = 69;
+            this.searchBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBar_KeyUp);
             // 
             // numBeli
             // 
@@ -152,6 +153,7 @@ namespace Proyek_ACS_TokoMat.Admin
             this.btnUpdate.TabIndex = 58;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label16
             // 
@@ -165,7 +167,6 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // numQty
             // 
-            this.numQty.Enabled = false;
             this.numQty.Location = new System.Drawing.Point(109, 514);
             this.numQty.Margin = new System.Windows.Forms.Padding(4);
             this.numQty.Maximum = new decimal(new int[] {
@@ -254,6 +255,7 @@ namespace Proyek_ACS_TokoMat.Admin
             this.dgvBarang.RowHeadersWidth = 51;
             this.dgvBarang.Size = new System.Drawing.Size(1035, 311);
             this.dgvBarang.TabIndex = 49;
+            this.dgvBarang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarang_CellDoubleClick);
             // 
             // Master_Barang
             // 
