@@ -152,7 +152,7 @@ namespace Proyek_ACS_TokoMat.Admin
                     if (rb.Checked) selectedStatus = rb.Text;
                 }
 
-                DB.exec($"INSERT INTO USERS VALUES('{username}','{password}','{selectedRole}','{selectedStatus}');");
+                DB.exec($"INSERT INTO USERS VALUES('{username}','{password}','{selectedStatus}','{selectedRole}');");
                 MessageBox.Show("Berhasil menginput " + username);
                 reset();
             }
