@@ -34,5 +34,10 @@ namespace Proyek_ACS_TokoMat
         {
 
         }
+
+        private void masterStokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
