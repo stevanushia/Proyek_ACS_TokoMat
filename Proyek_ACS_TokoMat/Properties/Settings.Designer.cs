@@ -33,5 +33,16 @@ namespace Proyek_ACS_TokoMat.Properties {
                 return ((string)(this["db_tokomatConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=db_lmaomart;Integrated Security=True;TrustServerCer" +
+            "tificate=True")]
+        public string db_lmaomartConnectionString {
+            get {
+                return ((string)(this["db_lmaomartConnectionString"]));
+            }
+        }
     }
 }
