@@ -48,5 +48,12 @@ namespace Proyek_ACS_TokoMat
             l.Show();
             this.Close();
         }
+
+        private void masterSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MasterSuppliers f = new MasterSuppliers();
+                f.Show();
+        }
+
     }
 }
