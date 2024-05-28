@@ -36,6 +36,8 @@
             this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanPembelianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laporanPenjualanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transaksiToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtWelcome = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +47,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.masterToolStripMenuItem,
-            this.laporanToolStripMenuItem});
+            this.laporanToolStripMenuItem,
+            this.transaksiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -68,6 +71,7 @@
             this.masterStokToolStripMenuItem.Name = "masterStokToolStripMenuItem";
             this.masterStokToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.masterStokToolStripMenuItem.Text = "Master Barang";
+            this.masterStokToolStripMenuItem.Click += new System.EventHandler(this.masterStokToolStripMenuItem_Click);
             // 
             // masterSupplierToolStripMenuItem
             // 
@@ -89,7 +93,7 @@
             this.laporanPenjualanToolStripMenuItem});
             this.laporanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
-            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
+            this.laporanToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.laporanToolStripMenuItem.Text = "Laporan";
             // 
             // laporanPembelianToolStripMenuItem
@@ -104,13 +108,29 @@
             this.laporanPenjualanToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.laporanPenjualanToolStripMenuItem.Text = "Laporan Penjualan";
             // 
+            // transaksiToolStripMenuItem
+            // 
+            this.transaksiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transaksiToolStripMenuItem1});
+            this.transaksiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transaksiToolStripMenuItem.Name = "transaksiToolStripMenuItem";
+            this.transaksiToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.transaksiToolStripMenuItem.Text = "Menu Transaksi";
+            this.transaksiToolStripMenuItem.Click += new System.EventHandler(this.transaksiToolStripMenuItem_Click);
+            // 
+            // transaksiToolStripMenuItem1
+            // 
+            this.transaksiToolStripMenuItem1.Name = "transaksiToolStripMenuItem1";
+            this.transaksiToolStripMenuItem1.Size = new System.Drawing.Size(157, 26);
+            this.transaksiToolStripMenuItem1.Text = "Transaksi";
+            // 
             // txtWelcome
             // 
             this.txtWelcome.AutoSize = true;
             this.txtWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWelcome.Location = new System.Drawing.Point(12, 45);
             this.txtWelcome.Name = "txtWelcome";
-            this.txtWelcome.Size = new System.Drawing.Size(282, 52);
+            this.txtWelcome.Size = new System.Drawing.Size(277, 51);
             this.txtWelcome.TabIndex = 1;
             this.txtWelcome.Text = "WELCOME, ";
             // 
@@ -144,5 +164,7 @@
         private System.Windows.Forms.ToolStripMenuItem laporanPembelianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem laporanPenjualanToolStripMenuItem;
         private System.Windows.Forms.Label txtWelcome;
+        private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaksiToolStripMenuItem1;
     }
 }

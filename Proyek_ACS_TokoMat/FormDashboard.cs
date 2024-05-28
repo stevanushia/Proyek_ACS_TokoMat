@@ -29,5 +29,15 @@ namespace Proyek_ACS_TokoMat
             Master_User f = new Master_User();
             f.Show();
         }
+
+        private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void masterStokToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

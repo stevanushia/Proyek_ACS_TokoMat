@@ -77,6 +77,12 @@
     <Compile Include="Admin\Edit Supplier.Designer.cs">
       <DependentUpon>Edit Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\FormMasterBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormMasterBarang.Designer.cs">
+      <DependentUpon>FormMasterBarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Laporan Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Edit Supplier.resx">
       <DependentUpon>Edit Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormMasterBarang.resx">
+      <DependentUpon>FormMasterBarang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Laporan Pembelian.resx">
       <DependentUpon>Laporan Pembelian.cs</DependentUpon>
