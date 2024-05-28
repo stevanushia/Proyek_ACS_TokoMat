@@ -39,7 +39,8 @@ namespace Proyek_ACS_TokoMat
 
         private void masterStokToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Master_Barang f = new Master_Barang();
+            f.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
