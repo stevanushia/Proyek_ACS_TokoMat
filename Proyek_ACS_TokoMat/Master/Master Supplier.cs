@@ -169,5 +169,10 @@ namespace Proyek_ACS_TokoMat.Admin
             }
             else MessageBox.Show("Terdapat field kosong");
         }
+
+        private void searchBar_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            reset();
+        }
     }
 }

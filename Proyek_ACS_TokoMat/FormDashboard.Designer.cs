@@ -110,7 +110,7 @@
             this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
 
             this.laporanToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
->
+
             this.laporanToolStripMenuItem.Text = "Laporan";
             // 
             // laporanPembelianToolStripMenuItem

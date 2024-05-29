@@ -53,64 +53,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Add Barang.cs">
+    <Compile Include="Laporan\Laporan Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Add Barang.Designer.cs">
-      <DependentUpon>Add Barang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Add Supplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Add Supplier.Designer.cs">
-      <DependentUpon>Add Supplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Edit Barang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Edit Barang.Designer.cs">
-      <DependentUpon>Edit Barang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Edit Supplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Edit Supplier.Designer.cs">
-      <DependentUpon>Edit Supplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\FormMasterBarang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\FormMasterBarang.Designer.cs">
-      <DependentUpon>FormMasterBarang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Laporan Pembelian.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Laporan Pembelian.Designer.cs">
+    <Compile Include="Laporan\Laporan Pembelian.Designer.cs">
       <DependentUpon>Laporan Pembelian.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Laporan Penjualan.cs">
+    <Compile Include="Laporan\Laporan Penjualan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Laporan Penjualan.Designer.cs">
+    <Compile Include="Laporan\Laporan Penjualan.Designer.cs">
       <DependentUpon>Laporan Penjualan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Master Barang.cs">
+    <Compile Include="Master\Master Barang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Master Barang.Designer.cs">
+    <Compile Include="Master\Master Barang.Designer.cs">
       <DependentUpon>Master Barang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Master Supplier.cs">
+    <Compile Include="Master\Master Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Master Supplier.Designer.cs">
+    <Compile Include="Master\Master Supplier.Designer.cs">
       <DependentUpon>Master Supplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Master User.cs">
+    <Compile Include="Master\Master User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Master User.Designer.cs">
+    <Compile Include="Master\Master User.Designer.cs">
       <DependentUpon>Master User.cs</DependentUpon>
     </Compile>
     <Compile Include="db_tokomatDataSet.Designer.cs">
@@ -129,25 +99,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="User\Cari Barang.cs">
+    <Compile Include="Kasir\Cari Barang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Cari Barang.Designer.cs">
+    <Compile Include="Kasir\Cari Barang.Designer.cs">
       <DependentUpon>Cari Barang.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Dashboard User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\Dashboard User.Designer.cs">
-      <DependentUpon>Dashboard User.cs</DependentUpon>
-    </Compile>
     <Compile Include="DB.cs" />
-    <Compile Include="Admin\Dashboard Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\Dashboard Admin.Designer.cs">
-      <DependentUpon>Dashboard Admin.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,65 +114,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User\Pembelian Barang.cs">
+    <Compile Include="Kasir\Pembelian Barang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Pembelian Barang.Designer.cs">
+    <Compile Include="Kasir\Pembelian Barang.Designer.cs">
       <DependentUpon>Pembelian Barang.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Penjualan Barang.cs">
+    <Compile Include="Kasir\Penjualan Barang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Penjualan Barang.Designer.cs">
+    <Compile Include="Kasir\Penjualan Barang.Designer.cs">
       <DependentUpon>Penjualan Barang.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Pre Order.cs">
+    <Compile Include="Kasir\Pre Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Pre Order.Designer.cs">
+    <Compile Include="Kasir\Pre Order.Designer.cs">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\Add Barang.resx">
-      <DependentUpon>Add Barang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Add Supplier.resx">
-      <DependentUpon>Add Supplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Dashboard Admin.resx">
-      <DependentUpon>Dashboard Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Edit Barang.resx">
-      <DependentUpon>Edit Barang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Edit Supplier.resx">
-      <DependentUpon>Edit Supplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\FormMasterBarang.resx">
-      <DependentUpon>FormMasterBarang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Laporan Pembelian.resx">
+    <EmbeddedResource Include="Laporan\Laporan Pembelian.resx">
       <DependentUpon>Laporan Pembelian.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Laporan Penjualan.resx">
+    <EmbeddedResource Include="Laporan\Laporan Penjualan.resx">
       <DependentUpon>Laporan Penjualan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Master Barang.resx">
+    <EmbeddedResource Include="Master\Master Barang.resx">
       <DependentUpon>Master Barang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Master Supplier.resx">
+    <EmbeddedResource Include="Master\Master Supplier.resx">
       <DependentUpon>Master Supplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Master User.resx">
+    <EmbeddedResource Include="Master\Master User.resx">
       <DependentUpon>Master User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Cari Barang.resx">
+    <EmbeddedResource Include="Kasir\Cari Barang.resx">
       <DependentUpon>Cari Barang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User\Dashboard User.resx">
-      <DependentUpon>Dashboard User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -224,13 +161,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Pembelian Barang.resx">
+    <EmbeddedResource Include="Kasir\Pembelian Barang.resx">
       <DependentUpon>Pembelian Barang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Penjualan Barang.resx">
+    <EmbeddedResource Include="Kasir\Penjualan Barang.resx">
       <DependentUpon>Penjualan Barang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Pre Order.resx">
+    <EmbeddedResource Include="Kasir\Pre Order.resx">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="db_tokomatDataSet.xsc">
