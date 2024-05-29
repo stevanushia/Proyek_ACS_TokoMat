@@ -1,4 +1,5 @@
 ﻿using Proyek_ACS_TokoMat.Admin;
+using Proyek_ACS_TokoMat.User;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,5 +56,10 @@ namespace Proyek_ACS_TokoMat
                 f.Show();
         }
 
+        private void preOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pre_Order f = new Pre_Order();
+            f.Show();
+        }
     }
 }

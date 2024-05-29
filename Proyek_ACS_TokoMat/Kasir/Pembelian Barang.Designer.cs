@@ -53,11 +53,11 @@ namespace Proyek_ACS_TokoMat.User
             this.label8 = new System.Windows.Forms.Label();
             this.txtKodeBarang = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.JumlahBeli = new System.Windows.Forms.NumericUpDown();
+            this.numQty = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBarang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JumlahBeli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
             this.SuspendLayout();
             // 
             // textStok
@@ -198,6 +198,7 @@ namespace Proyek_ACS_TokoMat.User
             this.BtnBack.TabIndex = 153;
             this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // label1
             // 
@@ -276,23 +277,23 @@ namespace Proyek_ACS_TokoMat.User
             this.button2.Text = "Cari";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // JumlahBeli
+            // numQty
             // 
-            this.JumlahBeli.Location = new System.Drawing.Point(149, 456);
-            this.JumlahBeli.Maximum = new decimal(new int[] {
+            this.numQty.Location = new System.Drawing.Point(149, 456);
+            this.numQty.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.JumlahBeli.Minimum = new decimal(new int[] {
+            this.numQty.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.JumlahBeli.Name = "JumlahBeli";
-            this.JumlahBeli.Size = new System.Drawing.Size(219, 26);
-            this.JumlahBeli.TabIndex = 143;
-            this.JumlahBeli.Value = new decimal(new int[] {
+            this.numQty.Name = "numQty";
+            this.numQty.Size = new System.Drawing.Size(219, 26);
+            this.numQty.TabIndex = 143;
+            this.numQty.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -346,13 +347,13 @@ namespace Proyek_ACS_TokoMat.User
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtKodeBarang);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.JumlahBeli);
+            this.Controls.Add(this.numQty);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Title);
             this.Name = "Pembelian_Barang";
             this.Text = "Pembelian_Barang";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBarang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.JumlahBeli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,7 +385,7 @@ namespace Proyek_ACS_TokoMat.User
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtKodeBarang;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.NumericUpDown JumlahBeli;
+        private System.Windows.Forms.NumericUpDown numQty;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Title;
     }

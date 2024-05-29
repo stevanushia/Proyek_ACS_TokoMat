@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace Proyek_ACS_TokoMat.User
 {
-    public partial class Form1 : Form
+    public partial class Penjualan_Barang : Form
     {
-        public Form1()
+        public Penjualan_Barang()
         {
             InitializeComponent();
+        }
+
+        public void setBarang(string id)
+        {
+            this.txtKodeBarang.Text = id;
+            this.txtNama.Text = DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = '{id}'");
+            this.txtHarga.Text = DB.getScalar($"SELECT HARGA FROM BARANG WHERE ID = '{id}'");
+            numQty.Value = 0;
+            //txtSubTotal.Text = "";
         }
 
         private void radioMember_CheckedChanged(object sender, EventArgs e)
@@ -33,6 +42,11 @@ namespace Proyek_ACS_TokoMat.User
         }
 
         private void radioNonMember_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
         {
 
         }
