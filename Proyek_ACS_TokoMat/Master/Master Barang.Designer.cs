@@ -219,7 +219,6 @@ namespace Proyek_ACS_TokoMat.Admin
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(132, 22);
             this.textBoxId.TabIndex = 52;
-            this.textBoxId.Text = "autogenerate";
             // 
             // label19
             // 

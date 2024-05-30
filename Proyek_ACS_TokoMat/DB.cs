@@ -42,41 +42,7 @@ namespace Proyek_ACS_TokoMat
             conn.Close();
         }
 
-        public static void notifByRole(string role, string t, string c, SqlTransaction tr)
-        {
-            DataTable detail = DB.getTr($"SELECT * FROM USERS WHERE ROLE = '{role}';", tr);
-            foreach (DataRow dr in detail.Rows)
-            {
-                string id = DB.generateIdTr("NOTIF", tr);
-                string title = t;
-                string content = c;
-                string status = "Unread";
-                string recipient = dr.Field<string>("ID");
-                DateTime now = DateTime.Now;
-                DB.execTr($"INSERT INTO NOTIF VALUES('{id}','{title}','{content}','{status}','{recipient}', '{now}')", tr);
-            }
 
-        }
-
-        public static bool cekTuhan()
-        {
-            try
-            {
-                DB.openConnection();
-                string adaKah = getScalar($"SELECT COUNT(*) FROM USERS WHERE ID = 'Tuhan';");
-                if (adaKah == "0")
-                {
-                    DB.exec($"INSERT INTO USERS VALUES('Tuhan','','','Tuhan', 'Tuhan Menyertaimu');");
-                }
-                DB.closeConnection();
-                return true;
-            }
-            catch (Exception exc)
-            {
-                System.Windows.Forms.MessageBox.Show(exc.Message, exc.ToString()); ;
-                return false;
-            }
-        }
         public static bool setLogged(string nama, string password)
         {
             try
@@ -108,11 +74,8 @@ namespace Proyek_ACS_TokoMat
             DataTable max = DB.getTr($"SELECT COUNT(*)+1 AS MAX FROM {table}", transaction);
             DataRow r = max.Rows[0];
             string urut = r.Field<int>("MAX").ToString();
-            while (urut.Length < 3)
-            {
-                urut = "0" + urut;
-            }
-            return table.Substring(0, 2) + urut;
+            
+            return urut;
         }
 
         public static bool cekNamaKembar(string table, string nama)

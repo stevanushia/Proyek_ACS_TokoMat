@@ -29,116 +29,84 @@ namespace Proyek_ACS_TokoMat.User
         /// </summary>
         private void InitializeComponent()
         {
-            this.textInvc = new System.Windows.Forms.TextBox();
+            this.searchBar = new System.Windows.Forms.TextBox();
             this.btnCcari = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
-            this.btnPembelian = new System.Windows.Forms.Button();
             this.btnBatal = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnPenjualan = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvBarang = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).BeginInit();
             this.SuspendLayout();
             // 
-            // textInvc
+            // searchBar
             // 
-            this.textInvc.Location = new System.Drawing.Point(564, 26);
-            this.textInvc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textInvc.Name = "textInvc";
-            this.textInvc.Size = new System.Drawing.Size(208, 22);
-            this.textInvc.TabIndex = 30;
+            this.searchBar.Location = new System.Drawing.Point(634, 32);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.Size = new System.Drawing.Size(234, 26);
+            this.searchBar.TabIndex = 30;
             // 
             // btnCcari
             // 
-            this.btnCcari.Location = new System.Drawing.Point(781, 23);
-            this.btnCcari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCcari.Location = new System.Drawing.Point(879, 29);
+            this.btnCcari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCcari.Name = "btnCcari";
-            this.btnCcari.Size = new System.Drawing.Size(100, 28);
+            this.btnCcari.Size = new System.Drawing.Size(112, 35);
             this.btnCcari.TabIndex = 29;
             this.btnCcari.Text = "Cari Barang";
             this.btnCcari.UseVisualStyleBackColor = true;
+            this.btnCcari.Click += new System.EventHandler(this.btnCcari_Click);
             // 
             // Title
             // 
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(20, 23);
+            this.Title.Location = new System.Drawing.Point(22, 29);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(127, 25);
+            this.Title.Size = new System.Drawing.Size(151, 29);
             this.Title.TabIndex = 28;
             this.Title.Text = "Cari Barang";
             // 
-            // btnPembelian
-            // 
-            this.btnPembelian.Location = new System.Drawing.Point(746, 407);
-            this.btnPembelian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Size = new System.Drawing.Size(135, 39);
-            this.btnPembelian.TabIndex = 26;
-            this.btnPembelian.Text = "Pembelian";
-            this.btnPembelian.UseVisualStyleBackColor = true;
-            // 
             // btnBatal
             // 
-            this.btnBatal.Location = new System.Drawing.Point(26, 407);
+            this.btnBatal.Location = new System.Drawing.Point(29, 509);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(135, 39);
+            this.btnBatal.Size = new System.Drawing.Size(152, 49);
             this.btnBatal.TabIndex = 27;
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
-            // dataGridView1
+            // dgvBarang
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 62);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 330);
-            this.dataGridView1.TabIndex = 25;
-            // 
-            // btnPenjualan
-            // 
-            this.btnPenjualan.Location = new System.Drawing.Point(605, 407);
-            this.btnPenjualan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPenjualan.Name = "btnPenjualan";
-            this.btnPenjualan.Size = new System.Drawing.Size(135, 39);
-            this.btnPenjualan.TabIndex = 31;
-            this.btnPenjualan.Text = "Penjualan";
-            this.btnPenjualan.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(465, 407);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 39);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Pre Order";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dgvBarang.AllowUserToAddRows = false;
+            this.dgvBarang.AllowUserToDeleteRows = false;
+            this.dgvBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBarang.Location = new System.Drawing.Point(29, 78);
+            this.dgvBarang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvBarang.Name = "dgvBarang";
+            this.dgvBarang.ReadOnly = true;
+            this.dgvBarang.RowHeadersWidth = 62;
+            this.dgvBarang.Size = new System.Drawing.Size(963, 412);
+            this.dgvBarang.TabIndex = 25;
+            this.dgvBarang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarang_CellContentClick);
+            this.dgvBarang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBarang_CellDoubleClick);
             // 
             // Cari_Barang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 475);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnPenjualan);
-            this.Controls.Add(this.textInvc);
+            this.ClientSize = new System.Drawing.Size(1020, 594);
+            this.Controls.Add(this.searchBar);
             this.Controls.Add(this.btnCcari);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.btnPembelian);
             this.Controls.Add(this.btnBatal);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvBarang);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Cari_Barang";
             this.Text = "Cari_Barang";
             this.Load += new System.EventHandler(this.Cari_Barang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBarang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,13 +114,10 @@ namespace Proyek_ACS_TokoMat.User
 
         #endregion
 
-        private System.Windows.Forms.TextBox textInvc;
+        private System.Windows.Forms.TextBox searchBar;
         private System.Windows.Forms.Button btnCcari;
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.Button btnPembelian;
         private System.Windows.Forms.Button btnBatal;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnPenjualan;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvBarang;
     }
 }

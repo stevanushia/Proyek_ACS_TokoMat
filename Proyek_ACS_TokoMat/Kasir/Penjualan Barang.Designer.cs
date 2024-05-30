@@ -1,7 +1,7 @@
 ﻿
 namespace Proyek_ACS_TokoMat.User
 {
-    partial class Form1
+    partial class Penjualan_Barang
     {
         /// <summary>
         /// Required designer variable.
@@ -54,14 +54,14 @@ namespace Proyek_ACS_TokoMat.User
             this.label8 = new System.Windows.Forms.Label();
             this.txtKodeBarang = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numQty = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNomorNota = new System.Windows.Forms.TextBox();
             this.BtnBack = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).BeginInit();
             this.SuspendLayout();
             // 
             // lblKembalian
@@ -291,18 +291,18 @@ namespace Proyek_ACS_TokoMat.User
             this.button2.Text = "Cari";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // numQty
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(164, 400);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numQty.Location = new System.Drawing.Point(164, 400);
+            this.numQty.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(219, 26);
-            this.numericUpDown1.TabIndex = 119;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numQty.Name = "numQty";
+            this.numQty.Size = new System.Drawing.Size(219, 26);
+            this.numQty.TabIndex = 119;
+            this.numQty.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -342,6 +342,7 @@ namespace Proyek_ACS_TokoMat.User
             this.BtnBack.TabIndex = 115;
             this.BtnBack.Text = "Back";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // Title
             // 
@@ -353,7 +354,7 @@ namespace Proyek_ACS_TokoMat.User
             this.Title.TabIndex = 114;
             this.Title.Text = "Penjualan Barang";
             // 
-            // Form1
+            // Penjualan_Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -383,17 +384,17 @@ namespace Proyek_ACS_TokoMat.User
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtKodeBarang);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numQty);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNomorNota);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.Title);
-            this.Name = "Form1";
+            this.Name = "Penjualan_Barang";
             this.Text = "Penjualan Barang";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,7 +426,7 @@ namespace Proyek_ACS_TokoMat.User
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtKodeBarang;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numQty;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNomorNota;
