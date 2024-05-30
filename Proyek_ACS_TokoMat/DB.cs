@@ -108,11 +108,8 @@ namespace Proyek_ACS_TokoMat
             DataTable max = DB.getTr($"SELECT COUNT(*)+1 AS MAX FROM {table}", transaction);
             DataRow r = max.Rows[0];
             string urut = r.Field<int>("MAX").ToString();
-            while (urut.Length < 3)
-            {
-                urut = "0" + urut;
-            }
-            return table.Substring(0, 2) + urut;
+            
+            return urut;
         }
 
         public static bool cekNamaKembar(string table, string nama)

@@ -26,8 +26,8 @@ CREATE TABLE hpo (
     id INT PRIMARY KEY IDENTITY,
     supplier INT NOT NULL,
     UserID INT NOT NULL,
-    date_ordered NVARCHAR(50) ,
-    date_arrived NVARCHAR(50) ,
+    date_ordered DATETIME ,
+    date_arrived DATETIME ,
     total_bill int,
 	total_paid int,
 	status varchar(50),
@@ -48,7 +48,7 @@ CREATE TABLE dpo (
 CREATE TABLE htrans (
     id INT PRIMARY KEY IDENTITY,
     UserID INT NOT NULL,
-    sale_date DATE NOT NULL,
+    sale_date DATETIME NOT NULL,
     total_amount int,
 	total_paid int,
     FOREIGN KEY (UserID) REFERENCES users(id)
@@ -69,7 +69,7 @@ CREATE TABLE retur (
     SupplierID INT NOT NULL,
     UserID INT NOT NULL,
     ProductID INT NOT NULL,
-    ReturnDate DATE NOT NULL,
+    ReturnDate DATETIME NOT NULL,
     Quantity INT NOT NULL,
     Reason NVARCHAR(255),
     FOREIGN KEY (SupplierID) REFERENCES supplier(id),

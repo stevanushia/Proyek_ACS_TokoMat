@@ -23,7 +23,10 @@ namespace Proyek_ACS_TokoMat.User
             txtNomorNota.Text = DB.generateId("HTRANS");
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
-            txtNomorNota.Text = "";
+            txtNomorNota.Enabled = false;
+            txtNama.Enabled = false;
+            txtKodeBarang.Enabled = false;
+            txtHarga.Enabled = false;
             txtNama.Text = "";
             txtHarga.Text = "";
             txtSubTotal.Text = "";
@@ -158,10 +161,10 @@ namespace Proyek_ACS_TokoMat.User
             updateHtrans();
         }
 
-        public void setSupplier(string supploer)
+        public void setSupplier(string supplier)
         {
             
-            textBoxSupplier.Text = DB.getScalar($"SELECT NAMA FROM SUPPLIER WHERE ID = '{supploer}'");
+            textBoxSupplier.Text = DB.getScalar($"SELECT NAMA FROM SUPPLIER WHERE ID = '{supplier}'");
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -182,24 +185,22 @@ namespace Proyek_ACS_TokoMat.User
                 string status = cbStatus.Items[cbStatus.SelectedIndex].ToString();
                 string supplier = DB.getScalarTr($"SELECT ID FROM SUPPLIER WHERE NAMA = '{textBoxSupplier.Text}'", transaction);
                 string employee = DB.getScalarTr($"SELECT ID FROM USERS WHERE NAMA = '{DB.logged.Field<string>("NAMA")}'", transaction);
-                string now = DateTime.Now.ToString();
-                string insertHPOQuery = $"INSERT INTO HPO (id,supplier, UserID, date_ordered, date_arrived, total_bill, total_paid, status) VALUES ({id},{supplier}, {employee}, '{now}', '{now}', {total_bill}, {total_paid}, '{status}')";
+                DateTime now = DateTime.Now;
+                string insertHPOQuery = $"INSERT INTO HPO (supplier, UserID, date_ordered, date_arrived, total_bill, total_paid, status) VALUES ({supplier}, {employee}, '{now}', '{now}', {total_bill}, {total_paid}, '{status}')";
                 Console.WriteLine(insertHPOQuery);  
                 DB.execTr(insertHPOQuery, transaction);
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
-                    string newid = DB.generateIdTr("DPO", transaction);
+                    //string newid = DB.generateIdTr("DPO", transaction);
                     DataGridViewRow row = dataGridView1.Rows[i];
                     string barang = row.Cells["Id"].Value.ToString();
                     int qty = Int32.Parse(row.Cells["Qty"].Value.ToString());
                     int subtotal = Int32.Parse(row.Cells["Subtotal"].Value.ToString());
 
-                    DB.execTr($"INSERT INTO DPO VALUES('{newid},{id},{barang},{qty},{subtotal}')", transaction);
+                    DB.execTr($"INSERT INTO DPO VALUES('{barang},{id},{qty},{subtotal}')", transaction);
                 }
 
-
-                DB.notifByRole("Manager", "Order PO Baru", id, transaction);
                 transaction.Commit();
                 reset();
             }

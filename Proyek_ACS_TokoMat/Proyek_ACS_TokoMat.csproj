@@ -53,6 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_tokomatDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\Laporan Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +87,6 @@
     </Compile>
     <Compile Include="Master\Master User.Designer.cs">
       <DependentUpon>Master User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="db_tokomatDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
