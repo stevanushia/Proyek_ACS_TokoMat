@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Proyek_ACS_TokoMat.User
 {
@@ -15,6 +16,205 @@ namespace Proyek_ACS_TokoMat.User
         public Pre_Order()
         {
             InitializeComponent();
+        }
+
+        public void reset()
+        {
+            txtNomorNota.Text = DB.generateId("HTRANS");
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            txtNomorNota.Enabled = false;
+            txtNama.Enabled = false;
+            txtKodeBarang.Enabled = false;
+            txtHarga.Enabled = false;
+            txtNama.Text = "";
+            txtHarga.Text = "";
+            txtSubTotal.Text = "";
+
+            cbStatus.Items.Clear();
+            cbStatus.Items.Add("Pending");
+            cbStatus.Items.Add("Arrived");
+            cbStatus.Items.Add("Finished");
+            cbStatus.SelectedIndex = 0;
+        }
+        public void setBarang(string id)
+        {
+            this.txtKodeBarang.Text = id;
+            this.txtNama.Text = DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = '{id}'");
+            this.txtHarga.Text = DB.getScalar($"SELECT HARGABELI FROM BARANG WHERE ID = '{id}'");
+            numQty.Value = 1;
+            //txtSubTotal.Text = "";
+            if (txtHarga.Text != "")
+            {
+                int qty = (int)numQty.Value;
+                int harga = Int32.Parse(txtHarga.Text);
+                int value = qty * harga;
+                txtSubTotal.Text = value.ToString();
+                updateHtrans();
+            }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cari_Barang f = new Cari_Barang(this, "BARANG");
+            f.Show();
+        }
+
+        private void Pre_Order_Load(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+
+        void updateHtrans()
+        {
+            int total = 0;
+            int bayar = 0;
+            int kembalian = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                total += Int32.Parse(row.Cells["Subtotal"].Value.ToString());
+            }
+            txtTotal.Text = total.ToString();
+
+            if (numBayar.Value > 0)
+            {
+                bayar = (int)numBayar.Value;
+                kembalian = bayar - total;
+                txtKembalian.Text = kembalian.ToString();
+            }
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
+        {
+            if (txtKodeBarang.Text != "" && numQty.Value > 0)
+            {
+                foreach (DataGridViewRow r in dataGridView1.Rows)
+                {
+                    if (r.Cells["ID"].Value.ToString() == txtKodeBarang.Text)
+                    {
+                        int qty = (int)numQty.Value;
+                        int rqty = Int32.Parse(r.Cells["Qty"].Value.ToString());
+                        int value = qty + rqty;
+                        int harga = Int32.Parse(r.Cells["Harga"].Value.ToString());
+                        r.Cells["Qty"].Value = value;
+                        r.Cells["Subtotal"].Value = value * harga;
+                        updateHtrans();
+                        return;
+                    }
+                }
+                this.dataGridView1.Rows.Add(txtKodeBarang.Text, txtNama.Text, txtHarga.Text, numQty.Value, txtSubTotal.Text);
+                updateHtrans();
+            }
+        }
+
+        private void numQty_ValueChanged(object sender, EventArgs e)
+        {
+            if (txtHarga.Text != "")
+            {
+                int qty = (int)numQty.Value;
+                int harga = Int32.Parse(txtHarga.Text);
+                int value = qty * harga;
+                txtSubTotal.Text = value.ToString();
+                updateHtrans();
+            }
+        }
+
+        private void numQty_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (txtHarga.Text != "")
+            {
+                int qty = (int)numQty.Value;
+                int harga = Int32.Parse(txtHarga.Text);
+                int value = qty * harga;
+                txtSubTotal.Text = value.ToString();
+                updateHtrans();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Remove")
+            {
+                dataGridView1.Rows.RemoveAt(e.RowIndex);
+                updateHtrans();
+            }
+        }
+
+        private void numBayar_ValueChanged(object sender, EventArgs e)
+        {
+            updateHtrans();
+        }
+
+        private void numBayar_KeyUp(object sender, KeyEventArgs e)
+        {
+            updateHtrans();
+        }
+
+        public void setSupplier(string supplier)
+        {
+            
+            textBoxSupplier.Text = DB.getScalar($"SELECT NAMA FROM SUPPLIER WHERE ID = '{supplier}'");
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count < 1)
+            {
+                MessageBox.Show("Keranjang Kosong");
+                return;
+            }
+
+
+            DB.openConnection();
+            SqlTransaction transaction = DB.conn.BeginTransaction();
+            try
+            {
+                string id = DB.generateIdTr("HPO", transaction);
+                int total_bill = Int32.Parse(txtTotal.Text);
+                int total_paid = (int)numBayar.Value;
+                string status = cbStatus.Items[cbStatus.SelectedIndex].ToString();
+                string supplier = DB.getScalarTr($"SELECT ID FROM SUPPLIER WHERE NAMA = '{textBoxSupplier.Text}'", transaction);
+                string employee = DB.getScalarTr($"SELECT ID FROM USERS WHERE NAMA = '{DB.logged.Field<string>("NAMA")}'", transaction);
+                DateTime now = DateTime.Now;
+                string insertHPOQuery = $"INSERT INTO HPO (supplier, UserID, date_ordered, date_arrived, total_bill, total_paid, status) VALUES ({supplier}, {employee}, '{now}', '{now}', {total_bill}, {total_paid}, '{status}')";
+                Console.WriteLine(insertHPOQuery);  
+                DB.execTr(insertHPOQuery, transaction);
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    //string newid = DB.generateIdTr("DPO", transaction);
+                    DataGridViewRow row = dataGridView1.Rows[i];
+                    string barang = row.Cells["Id"].Value.ToString();
+                    int qty = Int32.Parse(row.Cells["Qty"].Value.ToString());
+                    int subtotal = Int32.Parse(row.Cells["Subtotal"].Value.ToString());
+
+                    DB.execTr($"INSERT INTO DPO VALUES('{barang},{id},{qty},{subtotal}')", transaction);
+                }
+
+                transaction.Commit();
+                reset();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.ToString(), "Gagal insert data transaction");
+                transaction.Rollback();
+            }
+        }
+
+        private void btnSelSupplier_Click(object sender, EventArgs e)
+        {
+            Cari_Barang f = new Cari_Barang(this, "SUPPLIER");
+            f.Show();
         }
     }
 }

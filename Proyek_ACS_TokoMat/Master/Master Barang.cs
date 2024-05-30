@@ -82,7 +82,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string id = textBoxId.Text;
+            int id = Int32.Parse(textBoxId.Text);
             string nama = textBoxNama.Text;
             int harga = (int)numHarga.Value;
             int hbeli = (int)numBeli.Value;
