@@ -92,7 +92,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
             if (nama != "" && harga > 0 && hbeli > 0 && cbStatus.SelectedIndex > -1)
             {
-                if (DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = '{id}'") != nama)
+                if (DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = {id}") != nama)
                 {
                     if (DB.cekNamaKembar("BARANG", nama))
                     {
@@ -107,7 +107,7 @@ namespace Proyek_ACS_TokoMat.Admin
                     return;
                 }
 
-                DB.exec($"UPDATE BARANG SET NAMA = '{nama}', HARGAJUAL = {harga}, HARGABELI =  {hbeli}, QTY = {qty}, STATUS = '{status}', WHERE ID = '{id}'");
+                DB.exec($"UPDATE BARANG SET NAMA = '{nama}', HARGAJUAL = {harga}, HARGABELI = {hbeli}, QTY = {qty}, STATUS = '{status}' WHERE id = {id};");
                 MessageBox.Show("Berhasil mengupdate " + nama);
                 reset();
             }
