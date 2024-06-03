@@ -83,6 +83,10 @@ namespace Proyek_ACS_TokoMat.User
                 {
                     f.setSupplier(sel.Cells["ID"].Value.ToString());
                 }
+                if(table == "HPO")
+                {
+                    f.setHpo(sel.Cells["ID"].Value.ToString());
+                }
             }
             this.Close();
         }

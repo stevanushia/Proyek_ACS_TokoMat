@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Proyek_ACS_TokoMat.Kasir;
+using Proyek_ACS_TokoMat.User;
 
 namespace Proyek_ACS_TokoMat.User
 {
@@ -53,6 +53,8 @@ namespace Proyek_ACS_TokoMat.User
                 txtSubTotal.Text = value.ToString();
                 updateHtrans();
             }
+            btnUpdate.Enabled = false;
+            cbStatus.Enabled = false;
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -166,6 +168,8 @@ namespace Proyek_ACS_TokoMat.User
         {
             
             textBoxSupplier.Text = DB.getScalar($"SELECT NAMA FROM SUPPLIER WHERE ID = '{supplier}'");
+            btnUpdate.Enabled = false;
+            cbStatus.Enabled = false;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -219,8 +223,39 @@ namespace Proyek_ACS_TokoMat.User
 
         private void btnSelHpo_Click(object sender, EventArgs e)
         {
-            selectionForm s = new selectionForm(this);
+            Cari_Barang s = new Cari_Barang(this,"");
             s.Show();
+        }
+
+        public void setHpo(string hpo)
+        {
+            reset();
+            txtKodeBarang.Text = hpo;
+            textBoxSupplier.Text = DB.getScalar($"SELECT SUPPLIER FROM HPO WHERE ID = '{hpo}'");
+            txtNamaSupplier.Text = DB.getScalar($"SELECT NAMA FROM SUPPLIER WHERE ID = '{textBoxSupplier.Text}'");
+            btnSelSupplier.Enabled = false;
+            btnSelBarang.Enabled = false;
+
+            DataTable detail = DB.get($"SELECT * FROM DPO WHERE HPO = '{hpo}'  ORDER BY ID DESC;");
+            foreach (DataRow dr in detail.Rows)
+            {
+                string idBarang = dr.Field<string>("BARANG");
+                string namaBarang = DB.getScalar($"SELECT NAMA FROM BARANG WHERE ID = '{idBarang}';");
+                int hargaBarang = Int32.Parse(DB.getScalar($"SELECT HBELI FROM BARANG WHERE ID = '{idBarang}';"));
+                int qty = dr.Field<int>("QTY");
+                int subtotal = dr.Field<int>("SUBTOTAL");
+                dataGridView1.Rows.Add(idBarang, namaBarang, hargaBarang, qty, subtotal);
+            }
+            dataGridView1.Columns["Remove"].Visible = false;
+
+            txtTotal.Text = DB.getScalar($"SELECT TOTAL_BILL FROM HPO WHERE ID = '{hpo}'");
+            numBayar.Maximum = 9999999999;
+            numBayar.Value = Int32.Parse(DB.getScalar($"SELECT TOTAL_PAID FROM HPO WHERE ID = '{hpo}'"));
+            cbStatus.SelectedIndex = cbStatus.Items.IndexOf(DB.getScalar($"SELECT STATUS FROM HPO WHERE ID = '{hpo}'"));
+            //panel1.Enabled = true;
+            numQty.Enabled = false;
+            btnSave.Enabled = false;
+
         }
     }
 }

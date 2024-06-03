@@ -25,6 +25,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void Master_User_Load(object sender, EventArgs e)
         {
+
             reset();
             textBoxId.Enabled = false;
         }
@@ -82,9 +83,12 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string id = textBoxId.Text;
-            DB.exec($"DELETE FROM USERS WHERE ID = '{id}';");
-            reset();
+            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                string id = textBoxId.Text;
+                DB.exec($"DELETE FROM USERS WHERE ID = '{id}';");
+                reset();
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

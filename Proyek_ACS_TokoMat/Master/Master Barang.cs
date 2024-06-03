@@ -44,7 +44,7 @@ namespace Proyek_ACS_TokoMat.Admin
             numQty.Value = 0;
             numHarga.Value = 0;
             numBeli.Value = 0;
-
+            cbStatus.Enabled = false;
             textBoxNama.Text = "";
 
             cbStatus.SelectedIndex = 0;
@@ -54,7 +54,10 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            reset();
+            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                reset();
+            }
         }
 
         private void btnInput_Click(object sender, EventArgs e)
@@ -74,7 +77,7 @@ namespace Proyek_ACS_TokoMat.Admin
                     return;
                 }
 
-                DB.exec($"INSERT INTO BARANG VALUES('{nama}','{qty}','{harga}', '{hbeli}' ,'{status}')");
+                DB.exec($"INSERT INTO BARANG VALUES('{nama}','{qty}','{harga}', '{hbeli}' ,'Available')");
                 reset();
             }
             else MessageBox.Show("Ada field kosong");
@@ -82,6 +85,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            
             int id = Int32.Parse(textBoxId.Text);
             string nama = textBoxNama.Text;
             int harga = (int)numHarga.Value;
@@ -127,6 +131,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
             btnInput.Enabled = false;
             btnUpdate.Enabled = true;
+            cbStatus.Enabled = true;
         }
 
         private void searchBar_KeyUp(object sender, KeyEventArgs e)

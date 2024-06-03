@@ -52,29 +52,29 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 25);
+            this.label3.Location = new System.Drawing.Point(24, 31);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 20);
+            this.label3.Size = new System.Drawing.Size(139, 25);
             this.label3.TabIndex = 75;
             this.label3.Text = "Search Bar : ";
             // 
             // searchBar
             // 
-            this.searchBar.Location = new System.Drawing.Point(152, 23);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBar.Location = new System.Drawing.Point(171, 29);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(731, 22);
+            this.searchBar.Size = new System.Drawing.Size(822, 26);
             this.searchBar.TabIndex = 74;
             this.searchBar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBar_KeyUp_1);
             // 
             // rbNonAktif
             // 
             this.rbNonAktif.AutoSize = true;
-            this.rbNonAktif.Location = new System.Drawing.Point(182, 471);
-            this.rbNonAktif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNonAktif.Location = new System.Drawing.Point(205, 589);
+            this.rbNonAktif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbNonAktif.Name = "rbNonAktif";
-            this.rbNonAktif.Size = new System.Drawing.Size(82, 20);
+            this.rbNonAktif.Size = new System.Drawing.Size(100, 24);
             this.rbNonAktif.TabIndex = 73;
             this.rbNonAktif.TabStop = true;
             this.rbNonAktif.Text = "Non-Aktif";
@@ -83,10 +83,10 @@ namespace Proyek_ACS_TokoMat.Admin
             // rbAktif
             // 
             this.rbAktif.AutoSize = true;
-            this.rbAktif.Location = new System.Drawing.Point(113, 471);
-            this.rbAktif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAktif.Location = new System.Drawing.Point(127, 589);
+            this.rbAktif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbAktif.Name = "rbAktif";
-            this.rbAktif.Size = new System.Drawing.Size(53, 20);
+            this.rbAktif.Size = new System.Drawing.Size(66, 24);
             this.rbAktif.TabIndex = 72;
             this.rbAktif.TabStop = true;
             this.rbAktif.Text = "Aktif";
@@ -95,21 +95,22 @@ namespace Proyek_ACS_TokoMat.Admin
             // btnClear
             // 
             this.btnClear.Enabled = false;
-            this.btnClear.Location = new System.Drawing.Point(778, 436);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(875, 545);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(107, 28);
+            this.btnClear.Size = new System.Drawing.Size(120, 35);
             this.btnClear.TabIndex = 71;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(36, 474);
+            this.label26.Location = new System.Drawing.Point(40, 592);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 16);
+            this.label26.Size = new System.Drawing.Size(68, 20);
             this.label26.TabIndex = 70;
             this.label26.Text = "Status : ";
             // 
@@ -117,10 +118,10 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(778, 372);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(875, 465);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 28);
+            this.btnDelete.Size = new System.Drawing.Size(120, 35);
             this.btnDelete.TabIndex = 69;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -129,10 +130,10 @@ namespace Proyek_ACS_TokoMat.Admin
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(778, 404);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(875, 505);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(120, 35);
             this.btnUpdate.TabIndex = 68;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -144,77 +145,77 @@ namespace Proyek_ACS_TokoMat.Admin
             this.dgvSup.AllowUserToDeleteRows = false;
             this.dgvSup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSup.Location = new System.Drawing.Point(26, 68);
-            this.dgvSup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSup.Location = new System.Drawing.Point(29, 85);
+            this.dgvSup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvSup.Name = "dgvSup";
             this.dgvSup.ReadOnly = true;
             this.dgvSup.RowHeadersWidth = 51;
-            this.dgvSup.Size = new System.Drawing.Size(859, 293);
+            this.dgvSup.Size = new System.Drawing.Size(966, 366);
             this.dgvSup.TabIndex = 60;
             this.dgvSup.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSup_CellContentClick);
             this.dgvSup.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSup_CellDoubleClick_1);
             // 
             // textBoxKontak
             // 
-            this.textBoxKontak.Location = new System.Drawing.Point(113, 439);
-            this.textBoxKontak.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxKontak.Location = new System.Drawing.Point(127, 549);
+            this.textBoxKontak.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxKontak.Name = "textBoxKontak";
-            this.textBoxKontak.Size = new System.Drawing.Size(198, 22);
+            this.textBoxKontak.Size = new System.Drawing.Size(222, 26);
             this.textBoxKontak.TabIndex = 67;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(36, 443);
+            this.label27.Location = new System.Drawing.Point(40, 554);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(54, 16);
+            this.label27.Size = new System.Drawing.Size(67, 20);
             this.label27.TabIndex = 66;
             this.label27.Text = "Kontak :";
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(113, 407);
-            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNama.Location = new System.Drawing.Point(127, 509);
+            this.textBoxNama.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(198, 22);
+            this.textBoxNama.Size = new System.Drawing.Size(222, 26);
             this.textBoxNama.TabIndex = 65;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(36, 411);
+            this.label28.Location = new System.Drawing.Point(40, 514);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(50, 16);
+            this.label28.Size = new System.Drawing.Size(59, 20);
             this.label28.TabIndex = 64;
             this.label28.Text = "Nama :";
             // 
             // textBoxId
             // 
             this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(113, 375);
-            this.textBoxId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxId.Location = new System.Drawing.Point(127, 469);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(132, 22);
+            this.textBoxId.Size = new System.Drawing.Size(148, 26);
             this.textBoxId.TabIndex = 63;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(36, 379);
+            this.label29.Location = new System.Drawing.Point(40, 474);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(26, 16);
+            this.label29.Size = new System.Drawing.Size(34, 20);
             this.label29.TabIndex = 62;
             this.label29.Text = "ID :";
             // 
             // btnInput
             // 
-            this.btnInput.Location = new System.Drawing.Point(778, 500);
-            this.btnInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInput.Location = new System.Drawing.Point(875, 625);
+            this.btnInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInput.Name = "btnInput";
-            this.btnInput.Size = new System.Drawing.Size(107, 28);
+            this.btnInput.Size = new System.Drawing.Size(120, 35);
             this.btnInput.TabIndex = 61;
             this.btnInput.Text = "Input";
             this.btnInput.UseVisualStyleBackColor = true;
@@ -222,9 +223,9 @@ namespace Proyek_ACS_TokoMat.Admin
             // 
             // MasterSuppliers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 613);
+            this.ClientSize = new System.Drawing.Size(1025, 766);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.searchBar);
             this.Controls.Add(this.rbNonAktif);
