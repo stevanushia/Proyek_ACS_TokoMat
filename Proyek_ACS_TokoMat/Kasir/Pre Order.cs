@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Proyek_ACS_TokoMat.Kasir;
 
 namespace Proyek_ACS_TokoMat.User
 {
@@ -174,12 +175,11 @@ namespace Proyek_ACS_TokoMat.User
                 return;
             }
 
-
             DB.openConnection();
             SqlTransaction transaction = DB.conn.BeginTransaction();
             try
             {
-                string id = DB.generateIdTr("HPO", transaction);
+                string idHPO = DB.generateIdTr("HPO", transaction);
                 int total_bill = Int32.Parse(txtTotal.Text);
                 int total_paid = (int)numBayar.Value;
                 string status = cbStatus.Items[cbStatus.SelectedIndex].ToString();
@@ -198,7 +198,7 @@ namespace Proyek_ACS_TokoMat.User
                     int qty = Int32.Parse(row.Cells["Qty"].Value.ToString());
                     int subtotal = Int32.Parse(row.Cells["Subtotal"].Value.ToString());
 
-                    DB.execTr($"INSERT INTO DPO VALUES('{barang},{id},{qty},{subtotal}')", transaction);
+                    DB.execTr($"INSERT INTO DPO (hpo, barang, qty, subtotal) VALUES('{idHPO}','{barang}','{qty}','{subtotal}')", transaction);
                 }
 
                 transaction.Commit();
@@ -215,6 +215,12 @@ namespace Proyek_ACS_TokoMat.User
         {
             Cari_Barang f = new Cari_Barang(this, "SUPPLIER");
             f.Show();
+        }
+
+        private void btnSelHpo_Click(object sender, EventArgs e)
+        {
+            selectionForm s = new selectionForm(this);
+            s.Show();
         }
     }
 }

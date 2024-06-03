@@ -29,13 +29,16 @@ namespace Proyek_ACS_TokoMat.User
 
         void reset()
         {
-            
-                DataTable detail = DB.get($"SELECT * FROM {table} WHERE STATUS != 'Finished' ORDER BY ID DESC;");
-                if (table != "HPO") detail = DB.get($"SELECT * FROM {table} WHERE NAMA LIKE'%{searchBar.Text}%' AND (STATUS = 'Aktif' OR STATUS = 'AVAILABLE')  ORDER BY ID DESC;");
-                dgvBarang.DataSource = null;
-                dgvBarang.DataSource = detail;
-                dgvBarang.Columns["id"].Visible = false;
-            
+            DataTable detail = DB.get($"SELECT * FROM {table} WHERE STATUS != 'Finished' ORDER BY ID DESC;");
+
+            if (table != "HPO")
+            {
+                detail = DB.get($"SELECT * FROM {table} WHERE NAMA LIKE'%{searchBar.Text}%' AND (STATUS = 'Aktif' OR STATUS = 'AVAILABLE')  ORDER BY ID DESC;");
+            }
+
+            dgvBarang.DataSource = null;
+            dgvBarang.DataSource = detail;
+            dgvBarang.Columns["id"].Visible = false;
         }
 
         private void btnCcari_Click(object sender, EventArgs e)
@@ -68,7 +71,6 @@ namespace Proyek_ACS_TokoMat.User
                     f.setBarang(sel.Cells["ID"].Value.ToString());
 
                 }
-
             }
             else if (f is Pre_Order )
             {
@@ -82,8 +84,6 @@ namespace Proyek_ACS_TokoMat.User
                     f.setSupplier(sel.Cells["ID"].Value.ToString());
                 }
             }
-
-
             this.Close();
         }
 

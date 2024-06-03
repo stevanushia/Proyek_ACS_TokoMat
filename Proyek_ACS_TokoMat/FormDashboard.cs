@@ -30,7 +30,7 @@ namespace Proyek_ACS_TokoMat
         private void masterUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Master_User f = new Master_User();
-            f.Show();
+            f.ShowDialog();
         }
 
         private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace Proyek_ACS_TokoMat
         private void masterStokToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Master_Barang f = new Master_Barang();
-            f.Show();
+            f.ShowDialog();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -53,13 +53,13 @@ namespace Proyek_ACS_TokoMat
         private void masterSupplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MasterSuppliers f = new MasterSuppliers();
-                f.Show();
+                f.ShowDialog();
         }
 
         private void preOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Pre_Order f = new Pre_Order();
-            f.Show();
+            f.ShowDialog();
         }
     }
 }
