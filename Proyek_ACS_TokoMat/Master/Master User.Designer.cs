@@ -40,7 +40,6 @@ namespace Proyek_ACS_TokoMat.Admin
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.comboBoxRole = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -177,19 +176,6 @@ namespace Proyek_ACS_TokoMat.Admin
             this.comboBoxRole.Size = new System.Drawing.Size(197, 24);
             this.comboBoxRole.TabIndex = 71;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(679, 426);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 28);
-            this.btnDelete.TabIndex = 70;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
@@ -282,7 +268,6 @@ namespace Proyek_ACS_TokoMat.Admin
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.comboBoxRole);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.label27);
@@ -316,7 +301,6 @@ namespace Proyek_ACS_TokoMat.Admin
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox comboBoxRole;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Label label27;

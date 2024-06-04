@@ -134,10 +134,12 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("Menghapus supplier akan menghapus data terkait di Pre Order. Lanjutkan?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 string id = textBoxId.Text;
                 MessageBox.Show(id);
+                DB.exec($"DELETE FROM dpo WHERE hpo IN (SELECT id FROM hpo WHERE supplier = '{id}');");
+                DB.exec($"DELETE FROM hpo WHERE supplier = '{id}';");
                 DB.exec($"DELETE FROM SUPPLIER WHERE ID = '{id}';");
                 reset();
             }
