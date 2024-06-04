@@ -52,6 +52,7 @@ namespace Proyek_ACS_TokoMat.Admin
             this.button2.TabIndex = 81;
             this.button2.Text = "Show Report";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -61,6 +62,7 @@ namespace Proyek_ACS_TokoMat.Admin
             this.button1.TabIndex = 80;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Laporan_Pembelian
             // 

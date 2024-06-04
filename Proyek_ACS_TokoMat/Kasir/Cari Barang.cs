@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyek_ACS_TokoMat.Kasir;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -86,6 +87,14 @@ namespace Proyek_ACS_TokoMat.User
                 if(table == "HPO")
                 {
                     f.setHpo(sel.Cells["ID"].Value.ToString());
+                }
+            }
+            else if (f is FormTransaksi)
+            {
+                FormTransaksi f = (FormTransaksi)this.f;
+                if (table == "BARANG")
+                {
+                    f.setBarang(sel.Cells["ID"].Value.ToString());
                 }
             }
             this.Close();

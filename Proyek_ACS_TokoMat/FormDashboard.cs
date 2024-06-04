@@ -1,4 +1,5 @@
 ﻿using Proyek_ACS_TokoMat.Admin;
+using Proyek_ACS_TokoMat.Kasir;
 using Proyek_ACS_TokoMat.User;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,17 @@ namespace Proyek_ACS_TokoMat
         {
             Pre_Order f = new Pre_Order();
             f.ShowDialog();
+        }
+
+        private void transaksiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormTransaksi f = new FormTransaksi();
+            f.ShowDialog();
+        }
+        private void laporanPembelianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Laporan_Pembelian lp = new Laporan_Pembelian();
+            lp.ShowDialog();
         }
     }
 }

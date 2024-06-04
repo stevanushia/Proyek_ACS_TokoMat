@@ -58,6 +58,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Kasir\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan\cRPembelian.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cRPembelian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laporan\cRPenjualan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cRPenjualan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Laporan\Laporan Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +150,17 @@
     <Compile Include="Kasir\Pre Order.Designer.cs">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Kasir\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\cRPembelian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cRPembelian.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan\cRPenjualan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cRPenjualan.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\Laporan Pembelian.resx">
       <DependentUpon>Laporan Pembelian.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +227,9 @@
     <Content Include="Resources\TOKOMAT.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

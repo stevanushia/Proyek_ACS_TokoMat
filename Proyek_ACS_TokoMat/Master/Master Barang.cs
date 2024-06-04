@@ -54,10 +54,9 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            {
-                reset();
-            }
+            
+            reset();
+            
         }
 
         private void btnInput_Click(object sender, EventArgs e)
@@ -138,5 +137,6 @@ namespace Proyek_ACS_TokoMat.Admin
         {
             reset();
         }
+
     }
 }
