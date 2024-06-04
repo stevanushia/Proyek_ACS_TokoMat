@@ -53,12 +53,12 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void dgvSup_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void btnInput_Click_1(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace Proyek_ACS_TokoMat.Admin
             string kontak = textBoxKontak.Text;
             bool status = rbAktif.Checked || rbNonAktif.Checked;
 
-            if ( nama != "" && kontak != "" && status)
+            if (nama != "" && kontak != "" && status)
             {
                 if (DB.cekNamaKembar("SUPPLIER", nama))
                 {
@@ -134,9 +134,13 @@ namespace Proyek_ACS_TokoMat.Admin
 
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
-            string id = textBoxId.Text;
-            DB.exec($"DELETE FROM SUPPLIER WHERE ID = '{id}';");
-            reset();
+            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                string id = textBoxId.Text;
+                DB.exec($"DELETE FROM SUPPLIER WHERE ID = '{id}';");
+                reset();
+            }
+
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -173,6 +177,14 @@ namespace Proyek_ACS_TokoMat.Admin
         private void searchBar_KeyUp_1(object sender, KeyEventArgs e)
         {
             reset();
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                reset();
+            }
         }
     }
 }
