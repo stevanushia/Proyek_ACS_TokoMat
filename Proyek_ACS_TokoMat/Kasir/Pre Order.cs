@@ -223,7 +223,7 @@ namespace Proyek_ACS_TokoMat.User
 
         private void btnSelHpo_Click(object sender, EventArgs e)
         {
-            Cari_Barang s = new Cari_Barang(this,"");
+            Cari_Barang s = new Cari_Barang(this,"HPO");
             s.Show();
         }
 
