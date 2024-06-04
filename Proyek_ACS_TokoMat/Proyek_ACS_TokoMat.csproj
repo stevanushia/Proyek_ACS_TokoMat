@@ -58,6 +58,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_tokomatDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Kasir\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTransaksi.Designer.cs">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Laporan\Laporan Pembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Kasir\Pre Order.Designer.cs">
       <DependentUpon>Pre Order.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Kasir\FormTransaksi.resx">
+      <DependentUpon>FormTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan\Laporan Pembelian.resx">
       <DependentUpon>Laporan Pembelian.cs</DependentUpon>
     </EmbeddedResource>

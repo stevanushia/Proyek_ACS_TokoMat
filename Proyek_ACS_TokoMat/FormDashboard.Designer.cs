@@ -128,6 +128,7 @@
             this.transaksiToolStripMenuItem1.Name = "transaksiToolStripMenuItem1";
             this.transaksiToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.transaksiToolStripMenuItem1.Text = "Transaksi";
+            this.transaksiToolStripMenuItem1.Click += new System.EventHandler(this.transaksiToolStripMenuItem1_Click);
             // 
             // preOrderToolStripMenuItem
             // 
