@@ -61,5 +61,11 @@ namespace Proyek_ACS_TokoMat
             Pre_Order f = new Pre_Order();
             f.ShowDialog();
         }
+
+        private void laporanPembelianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Laporan_Pembelian lp = new Laporan_Pembelian();
+            lp.ShowDialog();
+        }
     }
 }
