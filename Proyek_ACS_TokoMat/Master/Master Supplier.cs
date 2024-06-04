@@ -137,6 +137,7 @@ namespace Proyek_ACS_TokoMat.Admin
             if (MessageBox.Show("Apakah yakin menghapus data?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 string id = textBoxId.Text;
+                MessageBox.Show(id);
                 DB.exec($"DELETE FROM SUPPLIER WHERE ID = '{id}';");
                 reset();
             }
