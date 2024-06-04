@@ -42,7 +42,7 @@ namespace Proyek_ACS_TokoMat.Admin
             rbAktif.Checked = false;
             rbNonAktif.Checked = false;
 
-            btnDelete.Enabled = false;
+            //btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
             btnInput.Enabled = true;
             btnClear.Enabled = true;
@@ -58,7 +58,6 @@ namespace Proyek_ACS_TokoMat.Admin
         {
             DataGridViewRow sel = dgvUsers.Rows[e.RowIndex];
 
-            btnDelete.Enabled = true;
             btnUpdate.Enabled = true;
             btnInput.Enabled = false;
             btnClear.Enabled = true;
