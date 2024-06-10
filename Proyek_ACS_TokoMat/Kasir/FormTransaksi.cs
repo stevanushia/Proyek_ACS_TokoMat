@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyek_ACS_TokoMat.Laporan;
 
 namespace Proyek_ACS_TokoMat.Kasir
 {
@@ -97,8 +98,8 @@ namespace Proyek_ACS_TokoMat.Kasir
 
         void cetakNota(string htrans)
         {
-            //FormNota f = new FormNota(htrans);
-            //f.Show();
+            FormNota f = new FormNota(Int32.Parse(htrans));
+            f.Show();
         }
 
         private void numBayar_ValueChanged(object sender, EventArgs e)
@@ -213,6 +214,7 @@ namespace Proyek_ACS_TokoMat.Kasir
                 check();
                 cetakNota(idHtrans);
                 reset();
+
             }
             catch (Exception exc)
             {

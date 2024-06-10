@@ -1,7 +1,7 @@
 ﻿
-namespace Proyek_ACS_TokoMat.Admin
+namespace Proyek_ACS_TokoMat.Laporan
 {
-    partial class Laporan_Pembelian
+    partial class FormNota
     {
         /// <summary>
         /// Required designer variable.
@@ -39,42 +39,41 @@ namespace Proyek_ACS_TokoMat.Admin
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 77);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(1, 84);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1191, 662);
-            this.crystalReportViewer1.TabIndex = 82;
-            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
+            this.crystalReportViewer1.TabIndex = 85;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(729, 8);
+            this.button2.Location = new System.Drawing.Point(727, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 63);
-            this.button2.TabIndex = 81;
+            this.button2.TabIndex = 84;
             this.button2.Text = "Show Report";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(958, 8);
+            this.button1.Location = new System.Drawing.Point(956, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 63);
-            this.button1.TabIndex = 80;
+            this.button1.TabIndex = 83;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Laporan_Pembelian
+            // FormNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 752);
+            this.ClientSize = new System.Drawing.Size(1202, 569);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Laporan_Pembelian";
-            this.Text = "Laporan_Pembelian";
+            this.Name = "FormNota";
+            this.Text = "FormNota";
             this.ResumeLayout(false);
 
         }
