@@ -73,5 +73,11 @@ namespace Proyek_ACS_TokoMat
             Laporan_Pembelian lp = new Laporan_Pembelian();
             lp.ShowDialog();
         }
+
+        private void laporanPenjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Laporan_Penjualan lp = new Laporan_Penjualan();
+            lp.ShowDialog();
+        }
     }
 }

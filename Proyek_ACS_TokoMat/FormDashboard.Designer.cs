@@ -113,6 +113,7 @@
             this.laporanPenjualanToolStripMenuItem.Name = "laporanPenjualanToolStripMenuItem";
             this.laporanPenjualanToolStripMenuItem.Size = new System.Drawing.Size(276, 34);
             this.laporanPenjualanToolStripMenuItem.Text = "Laporan Penjualan";
+            this.laporanPenjualanToolStripMenuItem.Click += new System.EventHandler(this.laporanPenjualanToolStripMenuItem_Click);
             // 
             // transaksiToolStripMenuItem
             // 
@@ -128,14 +129,14 @@
             // transaksiToolStripMenuItem1
             // 
             this.transaksiToolStripMenuItem1.Name = "transaksiToolStripMenuItem1";
-            this.transaksiToolStripMenuItem1.Size = new System.Drawing.Size(196, 34);
+            this.transaksiToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.transaksiToolStripMenuItem1.Text = "Transaksi";
             this.transaksiToolStripMenuItem1.Click += new System.EventHandler(this.transaksiToolStripMenuItem1_Click);
             // 
             // preOrderToolStripMenuItem
             // 
             this.preOrderToolStripMenuItem.Name = "preOrderToolStripMenuItem";
-            this.preOrderToolStripMenuItem.Size = new System.Drawing.Size(196, 34);
+            this.preOrderToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.preOrderToolStripMenuItem.Text = "Pre Order";
             this.preOrderToolStripMenuItem.Click += new System.EventHandler(this.preOrderToolStripMenuItem_Click);
             // 
