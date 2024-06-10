@@ -31,5 +31,10 @@ namespace Proyek_ACS_TokoMat.Admin
         {
             this.Dispose();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
